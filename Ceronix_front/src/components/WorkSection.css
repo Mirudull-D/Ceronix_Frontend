@@ -1,0 +1,26 @@
+.work-section-container {
+  padding: 100px 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.work-section-content {
+  border: 2px dashed #a200ff;
+  padding: 50px;
+  border-radius: 15px;
+  max-width: 900px;
+  width: 100%;
+}
+
+.work-section-content h2 {
+  font-size: 3rem;
+  margin-bottom: 20px;
+  color: #fff;
+}
+
+.work-section-content p {
+  font-size: 1.2rem;
+  color: #ccc;
+}

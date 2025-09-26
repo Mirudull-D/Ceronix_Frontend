@@ -1,0 +1,126 @@
+
+.team-container {
+  padding: 100px 20px;
+}
+
+@keyframes cardFadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(50px);
+  }
+}
+
+.team-title {
+  font-size: 3rem;
+  margin-bottom: 60px;
+  text-align: center;
+}
+
+.title-line-wrapper {
+  display: inline-block;
+  position: relative;
+  background: linear-gradient(90deg, #00ffff, #ff00ff 80%, #ffff00);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.title-line-wrapper::before,
+.title-line-wrapper::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  width: 580px;
+  height: 2px;
+  background: linear-gradient(to right, transparent, #00ffff, #ff00ff 69%, #ffff00, transparent);
+}
+
+.title-line-wrapper::before {
+  right: 100%;
+  margin-right: 15px;
+}
+
+.title-line-wrapper::after {
+  left: 100%;
+  margin-left: 15px;
+}
+
+.team-title .highlight-team {
+  background: linear-gradient(90deg, #ff00ff, #ff00c8, #d900ff, #a200ff);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+
+  border: 2px solid #d900ff;
+  padding: 5px 15px;
+  border-radius: 0;
+  box-shadow: 0 0 15px rgba(217, 0, 255, 0.4);
+  display: block;
+  margin: 15px auto 0;
+  width: fit-content;
+}
+
+.team-cards-container {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 30px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.team-card {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 15px;
+  padding: 25px;
+  width: 300px;
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  backdrop-filter: blur(5px);
+  opacity: 0;
+}
+
+.team-card.visible {
+  opacity: 1;
+  animation: cardFadeIn 0.8s ease-out forwards;
+}
+
+.team-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 10px 30px rgba(255, 0, 255, 0.2);
+}
+
+.team-card-image-container {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  margin: 0 auto 20px auto;
+  overflow: hidden;
+  border: 3px solid #a200ff;
+}
+
+.team-card-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.team-card-name {
+  font-size: 1.5rem;
+  margin-bottom: 5px;
+  color: #fff;
+}
+
+.team-card-role {
+  font-size: 1rem;
+  color: #ff00ff; 
+  font-weight: bold;
+  margin-bottom: 15px;
+}
+
+.team-card-intro {
+  font-size: 0.9rem;
+  color: #ccc;
+  line-height: 1.5;
+}

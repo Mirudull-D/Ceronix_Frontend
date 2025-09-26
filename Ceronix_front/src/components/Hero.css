@@ -1,0 +1,57 @@
+.hero-container {
+  background: linear-gradient(rgba(12, 12, 29, 0.7), rgba(12, 12, 29, 0.9)),
+  url('../assets/background.png');
+  background-size: cover; 
+  background-position: center;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 0 20px;
+  box-shadow: inset 0 0 0 0 1000px rgba(0, 0, 0, 0.2);
+  object-fit: contain;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+}
+
+.hero-content {
+  max-width: 800px;
+}
+
+.hero-content h1 {
+  font-size: 4rem;
+  margin-bottom: 1rem;
+  font-weight: 900;
+  letter-spacing: 2px;
+  animation: fadeIn 1.2s ease-out;
+}
+
+.hero-content p {
+  font-size: 1.5rem;
+  line-height: 1.6;
+  font-weight: 300;
+  animation: fadeIn 1.7s ease-out 1.0s;
+  animation-fill-mode: backwards;
+}
+
+
+.highlight-pink {
+  color: #ff00ff; 
+  font-weight: 700;
+}
+
+.highlight-yellow {
+  color: #ffff00; 
+  font-weight: 700;
+}
+
+.highlight-purple {
+  color: #d900ff; 
+  font-weight: 700;
+}

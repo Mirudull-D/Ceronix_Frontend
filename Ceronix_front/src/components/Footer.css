@@ -1,0 +1,24 @@
+.footer-container {
+  background: linear-gradient(rgba(12, 12, 29, 0.9), #0c0c1d),
+    url('../assets/background.png');
+  background-size: cover;
+  background-position: center;
+  padding: 80px 20px;
+  text-align: center;
+  position: relative;
+}
+
+.footer-logo {
+  font-size: 3rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+  background: linear-gradient(90deg, #00ffff, #ff00ff 70%, #ffff00);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.footer-content p {
+  color: #aaa;
+  font-size: 1rem;
+}

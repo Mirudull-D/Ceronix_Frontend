@@ -1,0 +1,6 @@
+.App {
+  text-align: center;
+}
+.gradient-bg {
+  background: linear-gradient(180deg, #000000 0%, #1a022b 69%, #2e054b 100%);
+}

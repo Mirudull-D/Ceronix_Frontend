@@ -1,0 +1,99 @@
+.navbar {
+  background: rgba(12, 12, 29, 0.5);
+  backdrop-filter: blur(5px); 
+  -webkit-backdrop-filter: blur(5px);
+  height: 80px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.2rem;
+  position: sticky;
+  top: 0;
+  z-index: 999;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+.navbar-container {
+  display: flex;
+  justify-content: space-between;
+  height: 80px;
+  width: 100%;
+  max-width: 1400px;
+  padding: 0 24px;
+}
+
+.navbar-logo {
+  justify-self: start;
+  cursor: pointer;
+  text-decoration: none;
+  font-size: 2rem;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  background: linear-gradient(90deg, #ff00ff, #ff00c8, #d900ff, #a200ff);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  animation: textGlow 4s ease-in-out infinite;
+}
+
+.nav-menu {
+  display: flex;
+  align-items: center;
+  list-style: none;
+  text-align: center;
+}
+
+.nav-item {
+  height: 80px;
+}
+
+.nav-links {
+  color: #fff;
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  padding: 0 2rem;
+  height: 100%;
+  transition: all 0.2s ease-in-out;
+}
+
+.nav-links:hover {
+  color: #ff00ff; 
+  border-bottom: 4px solid #ff00ff;
+}
+
+.nav-auth {
+  display: flex;
+  align-items: center;
+}
+
+.nav-button {
+  padding: 8px 20px;
+  border-radius: 50px;
+  margin-left: 10px;
+  cursor: pointer;
+  border: none;
+  outline: none;
+  font-size: 1rem;
+  font-weight: bold;
+  transition: all 0.3s ease-out;
+}
+
+.sign-in {
+  background-color: transparent;
+  color: #fff;
+  border: 2px solid #a200ff; 
+}
+
+.sign-in:hover {
+  background-color: #a200ff;
+}
+
+.sign-up {
+  background: linear-gradient(90deg, #ff00ff, #a200ff);
+  color: #fff;
+}
+
+.sign-up:hover {
+  transform: scale(1.05);
+}
