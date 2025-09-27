@@ -196,7 +196,12 @@ export default function Detection2() {
                 domain={["dataMin - 0.2", "dataMax + 0.2"]}
                 tickFormatter={(value) => value.toFixed(2)}
               />
-              <Tooltip cursor={{ strokeDasharray: "3 3" }} />
+              <Tooltip
+                cursor={{ strokeDasharray: "3 3" }}
+                formatter={(value) =>
+                  typeof value === "number" ? value.toFixed(3) : value
+                }
+              />
               <Line type="monotone" dataKey="current" stroke="#00ffff" dot={{ r: 4, fill: '#00ffff' }} className="vi-line" name="Operating Point" />
             </LineChart>
           </ResponsiveContainer>
@@ -221,7 +226,11 @@ export default function Detection2() {
                 tickFormatter={(value) => value.toFixed(2)}
                 stroke="#ffc658"
               />
-              <Tooltip />
+              <Tooltip
+                formatter={(value) =>
+                  typeof value === "number" ? value.toFixed(3) : value
+                }
+              />
               <Legend />
               <Line yAxisId="left" type="monotone" dataKey="supply_v" stroke="#8884d8" name="Supply" />
               <Line yAxisId="left" type="monotone" dataKey="output_v" stroke="#82ca9d" name="Output" />
@@ -240,7 +249,11 @@ export default function Detection2() {
                 domain={["dataMin - 0.1", "dataMax + 0.1"]}
                 tickFormatter={(value) => value.toFixed(2)}
               />
-              <Tooltip />
+              <Tooltip
+                formatter={(value) =>
+                  typeof value === "number" ? value.toFixed(3) : value
+                }
+              />
               <Legend />
               <Line type="monotone" dataKey="current" stroke="#ff7300" name="Current (A)" />
             </LineChart>
