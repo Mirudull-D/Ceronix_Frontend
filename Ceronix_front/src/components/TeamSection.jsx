@@ -1,43 +1,43 @@
-import React, { useEffect, useRef } from 'react';
-import './TeamSection.css';
+import React, { useEffect, useRef } from "react";
+import "./TeamSection.css";
 // Make sure you have an image in the assets folder
-import memberPhoto from '../assets/background.png'; 
+import memberPhoto from "../assets/background.png";
 
 const teamMembers = [
   {
-    name: 'Krishnan',
-    role: 'Frontend Lead',
-    intro: 'Passionate about creating modern and intuitive user interfaces.',
+    name: "Krishnan",
+    role: "Frontend Lead",
+    intro: "Passionate about creating modern and intuitive user interfaces.",
     photo: memberPhoto,
   },
   {
-    name: 'Raghav',
-    role: 'AI/ML Engineer',
-    intro: 'Expert in building and training deep learning models.',
+    name: "Raghav",
+    role: "AI/ML Engineer",
+    intro: "Expert in building and training deep learning models.",
     photo: memberPhoto,
   },
   {
-    name: 'Mridull',
-    role: 'Backend Developer',
-    intro: 'Manages the data pipelines and server-side logic.',
+    name: "Mridull",
+    role: "Backend Developer",
+    intro: "Manages the data pipelines and server-side logic.",
     photo: memberPhoto,
   },
   {
-    name: 'Rohith',
-    role: 'IOT',
-    intro: 'Therla bha',
+    name: "Rohith",
+    role: "IOT",
+    intro: "Audrino Enthusiast",
     photo: memberPhoto,
   },
   {
-    name: 'Sanjit',
-    role: 'Hardware Lead',
-    intro: 'Ensures the hardware components are top-notch and reliable.',
+    name: "Sanjit",
+    role: "Hardware Lead",
+    intro: "Ensures the hardware components are top-notch and reliable.",
     photo: memberPhoto,
   },
   {
-    name: 'Sai Koushik',
-    role: 'UI/UX Designer',
-    intro: 'Designs user-friendly and visually appealing interfaces.',
+    name: "Sai Koushik",
+    role: "UI/UX Designer",
+    intro: "Designs user-friendly and visually appealing interfaces.",
     photo: memberPhoto,
   },
 ];
@@ -50,13 +50,13 @@ const TeamSection = () => {
       (entries) => {
         entries.forEach((entry) => {
           if (entry.isIntersecting) {
-            entry.target.classList.add('visible');
-            observer.unobserve(entry.target); 
+            entry.target.classList.add("visible");
+            observer.unobserve(entry.target);
           }
         });
       },
       {
-        threshold: 0.1, 
+        threshold: 0.1,
       }
     );
 
@@ -83,9 +83,6 @@ const TeamSection = () => {
             ref={(el) => (cardsRef.current[index] = el)}
             style={{ animationDelay: `${index * 0.45}s` }}
           >
-            <div className="team-card-image-container">
-              <img src={member.photo} alt={member.name} className="team-card-image" />
-            </div>
             <h3 className="team-card-name">{member.name}</h3>
             <p className="team-card-role">{member.role}</p>
             <p className="team-card-intro">{member.intro}</p>
