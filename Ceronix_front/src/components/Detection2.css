@@ -126,6 +126,16 @@
   color: #fff;
 }
 
+.reading-value.ok {
+  color: #47ff84;
+  text-shadow: 0 0 10px rgba(71, 255, 132, 0.5);
+}
+
+.reading-value.bad {
+  color: #ff4747;
+  text-shadow: 0 0 10px rgba(255, 71, 71, 0.5);
+}
+
 .reading-unit {
   font-size: 1.1rem;
   color: #aaa;
