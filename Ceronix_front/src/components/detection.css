@@ -1,0 +1,112 @@
+.detection-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 40px 20px;
+  min-height: 100vh;
+  color: #fff;
+}
+
+.detection-content {
+  background-color: rgba(20, 20, 30, 0.8);
+  border: 2px dashed #a200ff;
+  padding: 40px;
+  border-radius: 15px;
+  max-width: 500px;
+  width: 100%;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+  backdrop-filter: blur(10px);
+}
+
+.detection-title {
+  font-size: 2rem;
+  font-weight: bold;
+  text-align: center;
+  margin-bottom: 30px;
+  color: #fff;
+}
+
+.file-input-container {
+  display: block;
+  width: 100%;
+  font-size: 0.9rem;
+  color: #ccc;
+  margin-bottom: 20px;
+}
+
+.file-input-container::file-selector-button {
+  margin-right: 1rem;
+  padding: 0.6rem 1rem;
+  border-radius: 8px;
+  border: 0;
+  font-size: 0.9rem;
+  font-weight: 600;
+  background-color: #a200ff;
+  color: white;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.file-input-container::file-selector-button:hover {
+  background-color: #8e00e6;
+}
+
+.detect-button {
+  width: 100%;
+  padding: 0.75rem 1rem;
+  background-color: #a200ff;
+  color: white;
+  border-radius: 8px;
+  border: none;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.detect-button:hover:not(:disabled) {
+  background-color: #8e00e6;
+}
+
+.detect-button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.results-container {
+  margin-top: 20px;
+  color: #ccc;
+  font-size: 1rem;
+  padding: 15px;
+  background-color: rgba(0, 0, 0, 0.2);
+  border: 1px solid #444;
+  border-radius: 8px;
+}
+
+.results-container b {
+  color: #fff;
+}
+
+.result-image {
+  margin-top: 20px;
+  width: 100%;
+  border-radius: 8px;
+  border: 1px solid #444;
+}
+
+.loading-spinner {
+  display: inline-block;
+  width: 1em;
+  height: 1em;
+  border: 2px solid currentColor;
+  border-right-color: transparent;
+  border-radius: 50%;
+  animation: spinner-border 0.75s linear infinite;
+  vertical-align: text-bottom;
+  margin-right: 0.5em;
+}
+
+@keyframes spinner-border {
+  to {
+    transform: rotate(360deg);
+  }
+}
