@@ -1,4 +1,4 @@
-.detection-container {
+.detection3-container {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -8,7 +8,7 @@
   color: #fff;
 }
 
-.detection-content {
+.detection3-content {
   background-color: rgba(20, 20, 30, 0.8);
   border: 2px dashed #a200ff;
   padding: 40px;
@@ -19,7 +19,7 @@
   backdrop-filter: blur(10px);
 }
 
-.detection-title {
+.detection3-title {
   font-size: 2rem;
   font-weight: bold;
   text-align: center;
@@ -27,7 +27,7 @@
   color: #fff;
 }
 
-.file-input-container {
+.detection3-file-input-container {
   display: block;
   width: 100%;
   font-size: 0.9rem;
@@ -35,7 +35,7 @@
   margin-bottom: 20px;
 }
 
-.file-input-container::file-selector-button {
+.detection3-file-input-container::file-selector-button {
   margin-right: 1rem;
   padding: 0.6rem 1rem;
   border-radius: 8px;
@@ -48,11 +48,11 @@
   transition: background-color 0.2s;
 }
 
-.file-input-container::file-selector-button:hover {
+.detection3-file-input-container::file-selector-button:hover {
   background-color: #8e00e6;
 }
 
-.detect-button {
+.detection3-detect-button {
   width: 100%;
   padding: 0.75rem 1rem;
   background-color: #a200ff;
@@ -64,16 +64,16 @@
   transition: background-color 0.2s;
 }
 
-.detect-button:hover:not(:disabled) {
+.detection3-detect-button:hover:not(:disabled) {
   background-color: #8e00e6;
 }
 
-.detect-button:disabled {
+.detection3-detect-button:disabled {
   opacity: 0.5;
   cursor: not-allowed;
 }
 
-.results-container {
+.detection3-results-container {
   margin-top: 20px;
   color: #ccc;
   font-size: 1rem;
@@ -82,17 +82,18 @@
   border: 1px solid #444;
   border-radius: 8px;
 }
-.results-container b {
+.detection3-results-container b {
   color: #fff;
 }
 
-.result-image {
+.detection3-result-image {
+  margin-top: 20px;
   width: 100%;
   border-radius: 8px;
   border: 1px solid #444;
 }
 
-.loading-spinner {
+.detection3-loading-spinner {
   display: inline-block;
   width: 1em;
   height: 1em;

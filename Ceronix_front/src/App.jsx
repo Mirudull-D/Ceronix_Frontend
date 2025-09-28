@@ -4,8 +4,8 @@ import Navbar from "./components/Navbar.jsx";
 import Hero from "./components/Hero.jsx";
 import TeamSection from "./components/TeamSection.jsx";
 import Footer from "./components/Footer.jsx";
-import Detection from "./components/Detection.jsx";
 import Detection2 from "./components/Detection2.jsx";
+import WorkSection from "./components/WorkSection.jsx";
 
 function App() {
   return (
@@ -13,7 +13,7 @@ function App() {
       <Navbar />
       <main>
         <Hero />
-        <Detection />
+        <WorkSection />
         <Detection2 />
         <TeamSection />
       </main>

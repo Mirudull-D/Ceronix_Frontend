@@ -7,20 +7,22 @@
 }
 
 .work-section-content {
-  border: 2px dashed #a200ff;
-  padding: 50px;
-  border-radius: 15px;
-  max-width: 900px;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 40px;
+  flex-wrap: wrap;
+  max-width: 1200px;
   width: 100%;
 }
 
-.work-section-content h2 {
+.work-section-main-title {
   font-size: 3rem;
-  margin-bottom: 20px;
+  margin-bottom: 60px;
   color: #fff;
-}
-
-.work-section-content p {
-  font-size: 1.2rem;
-  color: #ccc;
+  text-align: center;
+  background: linear-gradient(90deg, #00ffff, #ff00ff);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
 }
