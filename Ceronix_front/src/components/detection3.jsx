@@ -23,20 +23,31 @@ export default function Detection3() {
       const formData = new FormData();
       formData.append("file", file);
 
-      const res = await axios.post("http://127.0.0.1:8000/predict_scratch", formData, {
+      // ✅ Ensure port matches your FastAPI server
+      const res = await axios.post("http://127.0.0.1:8001/predict2", formData, {
         timeout: 60000,
       });
 
+      console.log("Backend Response:", res.data);
+
       const data = res.data || {};
-      setScratches(Array.isArray(data.scratches) ? data.scratches : []);
+      const detectedScratches = Array.isArray(data.scratches)
+        ? data.scratches
+        : [];
+
+      // ✅ If empty -> consider IC as Genuine
+      if (detectedScratches.length === 0) {
+        setScratches(["Genuine"]);
+      } else {
+        setScratches(detectedScratches);
+      }
 
       if (data.output_url) {
-        setOutputUrl(`http://127.0.0.1:8000${data.output_url}?t=${Date.now()}`);
+        setOutputUrl(`http://127.0.0.1:8001${data.output_url}?t=${Date.now()}`);
       }
     } catch (err) {
-      console.warn("Scratch detector backend not available. Displaying mock data.", err);
-      await new Promise(resolve => setTimeout(resolve, 1500));
-      setScratches(["Minor scratch detected on surface"]);
+      console.error("Error calling backend:", err);
+      setScratches(["⚠️ Could not connect to backend"]);
       setOutputUrl(placeholderImage);
     } finally {
       setLoading(false);
@@ -72,14 +83,20 @@ export default function Detection3() {
 
         <div className="detection3-results-container">
           {scratches.length > 0 ? (
-            <p><b>Detections:</b> {scratches.join(", ")}</p>
+            <p>
+              <b>Result:</b> {scratches.join(", ")}
+            </p>
           ) : (
             <p>Upload an image to detect scratches.</p>
           )}
         </div>
 
         {outputUrl && (
-          <img src={outputUrl} alt="Scratch Detection Result" className="detection3-result-image" />
+          <img
+            src={outputUrl}
+            alt="Scratch Detection Result"
+            className="detection3-result-image"
+          />
         )}
       </div>
     </div>
