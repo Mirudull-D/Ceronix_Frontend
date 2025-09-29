@@ -1,6 +1,7 @@
 import axios from "axios";
 import React, { useState } from "react";
 import placeholderImage from "../assets/background.png";
+import sampleOutput from  "../assets/test1.jpeg"; 
 import "./detection.css";
 
 export default function Detection() {
@@ -85,13 +86,26 @@ export default function Detection() {
         </div>
 
         {outputUrl && (
+          <div className="results-container">
+            <img
+              src={outputUrl}
+              alt="Detection Result"
+              className="result-image"
+            />
+          </div>
+        )}
+
+        {/* Sample Output section (always visible), same CSS as output */}
+        <div className="results-container">
+          <p>Sample Output</p>
           <img
-            src={outputUrl}
-            alt="Detection Result"
+            src={sampleOutput}
+            alt="Sample Detection Result"
             className="result-image"
           />
-        )}
+        </div>
       </div>
     </div>
   );
 }
+ 

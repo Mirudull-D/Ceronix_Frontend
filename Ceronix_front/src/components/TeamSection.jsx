@@ -5,37 +5,37 @@ import memberPhoto from "../assets/background.png";
 
 const teamMembers = [
   {
-    name: "Krishnan",
+    name: "Krishna Dhalwani",
     role: "Frontend Lead",
     intro: "Passionate about creating modern and intuitive user interfaces.",
     photo: memberPhoto,
   },
   {
-    name: "Raghav",
-    role: "AI/ML Engineer",
-    intro: "Expert in building and training deep learning models.",
-    photo: memberPhoto,
-  },
-  {
-    name: "Mridull",
+    name: "D Mirudull",
     role: "Backend Developer",
     intro: "Manages the data pipelines and server-side logic.",
     photo: memberPhoto,
   },
   {
-    name: "Rohith",
-    role: "IOT",
-    intro: "Audrino Enthusiast",
+    name: "Raghav S",
+    role: "AI/ML Engineer",
+    intro: "Expert in building and training deep learning models.",
     photo: memberPhoto,
   },
   {
-    name: "Sanjit",
+    name: "Rohith Ramesh",
+    role: "Hardware Engineer",
+    intro: "Audrino Implementation of the project",
+    photo: memberPhoto,
+  },
+  {
+    name: "Sanjit BJ",
     role: "Hardware Lead",
     intro: "Ensures the hardware components are top-notch and reliable.",
     photo: memberPhoto,
   },
   {
-    name: "Sai Koushik",
+    name: "Sai Kaushik N",
     role: "UI/UX Designer",
     intro: "Designs user-friendly and visually appealing interfaces.",
     photo: memberPhoto,

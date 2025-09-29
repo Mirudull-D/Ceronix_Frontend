@@ -1,6 +1,7 @@
 import axios from "axios";
 import React, { useState } from "react";
 import placeholderImage from "../assets/background.png";
+import sampleOutput from "../assets/test2.jpg"; // Import your sample image
 import "./detection3.css";
 
 export default function Detection3() {
@@ -23,7 +24,6 @@ export default function Detection3() {
       const formData = new FormData();
       formData.append("file", file);
 
-      // ✅ Ensure port matches your FastAPI server
       const res = await axios.post("http://127.0.0.1:8001/predict2", formData, {
         timeout: 60000,
       });
@@ -35,7 +35,6 @@ export default function Detection3() {
         ? data.scratches
         : [];
 
-      // ✅ If empty -> consider IC as Genuine
       if (detectedScratches.length === 0) {
         setScratches(["Genuine"]);
       } else {
@@ -92,12 +91,24 @@ export default function Detection3() {
         </div>
 
         {outputUrl && (
-          <img
-            src={outputUrl}
-            alt="Scratch Detection Result"
-            className="detection3-result-image"
-          />
+          <div className="detection3-results-container">
+            <img
+              src={outputUrl}
+              alt="Scratch Detection Result"
+              className="detection3-result-image"
+            />
+          </div>
         )}
+
+        {/* Sample Output Section - Always visible below the output */}
+        <div className="detection3-results-container">
+          <p>Sample Output</p>
+          <img
+            src={sampleOutput}
+            alt="Sample Scratch Detection"
+            className="result-image"
+          />
+        </div>
       </div>
     </div>
   );

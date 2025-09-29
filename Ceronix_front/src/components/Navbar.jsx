@@ -19,10 +19,7 @@ const Navbar = () => {
             <a href="#team" className="nav-links">Team</a>
           </li>
         </ul>
-        <div className="nav-auth">
-          <button className="nav-button sign-in">Sign In</button>
-          <button className="nav-button sign-up">Sign Up</button>
-        </div>
+       
       </div>
     </nav>
   );
